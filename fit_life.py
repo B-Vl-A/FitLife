@@ -21,7 +21,7 @@ def calс_bmi(user_weight, user_height):
 
 # 4. Подсчет воды: вес * 30 мл
 def calс_water(user_weight):
-    """"Считает норму воды в литрах: 30 мл на каждый кг веса."""
+    """Считает норму воды в литрах: 30 мл на каждый кг веса."""
     return round(user_weight * WATER_PER_KG / ML_PER_LITER, 1)
 
 
