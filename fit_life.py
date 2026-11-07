@@ -15,16 +15,22 @@ user_height = float(input('Напишите свой рост в метрах (�
 
 # 3. Рассчитай bmi (Индекс массы тела)
 def calс_bmi(user_weight, user_height):
+    """Считает индекс массы тела и округляет до одного знака после запятой."""
     return round(user_weight / (user_height ** 2), 1)
 
 
-# Подсчет воды: вес * 30 мл
+# 4. Подсчет воды: вес * 30 мл
 def calс_water(user_weight):
+    """"Считает норму воды в литрах: 30 мл на каждый кг веса."""
     return round(user_weight * WATER_PER_KG / ML_PER_LITER, 1)
 
 
-# 4. Вывод результата
+# 5. Вызов функций
+bmi = calс_bmi(user_weight, user_height)
+water = calс_water(user_weight)
+
+# 6. Вывод результата
 print(f'Отчет для пользователя: {user_name} ({user_age} лет)')
-print(f'Твой Индекс Массы Тела: {calс_bmi(user_weight, user_height)}')
-print(f'Рекомендуемая норма воды: {calс_water(user_weight)} л. в день\n')
+print(f'Твой Индекс Массы Тела: {bmi}')
+print(f'Рекомендуемая норма воды: {water} л. в день\n')
 print("Расчет окончен. Будьте здоровы!")
