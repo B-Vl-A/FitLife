@@ -55,7 +55,7 @@ def get_user_age():
 
         user_age = int(user_age)
 
-        if user_age <= 0 or user_age >= 100:
+        if user_age <= 0 or user_age >= 110:
             print('Ошибка! Введите возраст от 0 до 110 лет.')
             first_attempt = False
             continue
